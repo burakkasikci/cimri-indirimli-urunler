@@ -57,11 +57,11 @@ def main():
         # Yeni verilerin yüklenmesi için zaman tanı
         time.sleep(5)
         
-        # Sayfanın %30 kadar altına kaydırma işlemi
+        # Sayfanın %x kadar altına kaydırma işlemi
         for i in range(50):  # 50 kez kaydırma işlemi yap
-            # driver.execute_script("window.scrollBy(0, document.body.scrollHeight * 0.30);")
+            # driver.execute_script("window.scrollBy(0, document.body.scrollHeight * 0.9);")
             driver.execute_script("window.scrollBy(0, window.innerHeight);")
-            time.sleep(3)  # 2 saniye bekle    
+            time.sleep(2)  # x saniye bekle    
             print(f"{i+1}. kere scroll işlemi yapıldı. Sayfanın guncel URL'si: {driver.current_url}")
 
 
